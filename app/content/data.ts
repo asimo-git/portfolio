@@ -133,3 +133,24 @@ export const projectsContent = {
         },
     ],
 };
+
+export const contactsContent = {
+    subtitle: "04. Контакты",
+    text: "Открыта для интересных проектов и предложений",
+
+    name: {
+        label: "Имя",
+        placeholder: "Как к вам обращаться?",
+    },
+    email: {
+        label: "Контакт для связи",
+        placeholder: "Ваш е-мейл или телеграм",
+    },
+    message: {
+        label: "Сообщение",
+        placeholder: "Расскажите о вашем проекте...",
+    },
+    buttonText: "Отправить сообщение",
+    successMessage: "Сообщение отправлено!",
+    errorMessage: "Неизвестная ошибка :(",
+};

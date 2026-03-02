@@ -17,7 +17,7 @@ export const heroContent = {
 export const aboutContent = {
     greeting: "01. Обо мне",
     name: "Екатерина Ковалева",
-    subtitle: "Кто я такая?",
+    subtitle: "01. Обо мне",
     description:
         "Я frontend-разработчик с 5+ годами опыта создания современных веб-приложений. Специализируюсь на React экосистеме и создании плавных пользовательских интерфейсов.",
     plaques: [
@@ -46,6 +46,90 @@ export const aboutContent = {
             icon: "🧩",
             subtitle: "Компонентный подход",
             description: "Модульная архитектура и переиспользуемые компоненты",
+        },
+    ],
+};
+
+export const skillContent = {
+    subtitle: "02. Мой стек",
+    skills: [
+        { icon: "⚛️", name: "React" },
+        { icon: "🔷", name: "TypeScript" },
+        { icon: "🎨", name: "Tailwind" },
+        { icon: "📦", name: "Webpack" },
+        { icon: "🐙", name: "Git" },
+        { icon: "🎭", name: "Figma" },
+        { icon: "🧪", name: "Jest" },
+        { icon: "🚀", name: "Vite" },
+        { icon: "🔄", name: "Redux" },
+    ],
+};
+
+type Project = {
+    title: string;
+    description: string;
+    img: string;
+    link: string;
+    gradient?: string;
+    tags: string[];
+};
+
+export const projectsContent = {
+    subtitle: "03. Проекты",
+    projects: <Project[]>[
+        {
+            title: "Сайт для мастера маникюра",
+            description:
+                "Одностраничный сайт-визитка с современным дизайном. Сделан максимально легким и быстрым для загрузки",
+            img: "/projects/1.png",
+            link: "https://asimo-git.github.io/lightweight-template/",
+            tags: ["JavaScript", "CSS", "Vite"],
+        },
+        {
+            title: "Rick and Morty API Viewer",
+            description:
+                "Пример интерфейса для работы с открытым API. Фильтрация и поиск по персонажам.",
+            img: "/projects/2.png",
+            link: "https://asimo-git.github.io/rick-and-morty-task",
+            tags: ["React", "JavaScript", "WebSocket"],
+        },
+        {
+            title: "Coﬀee House",
+            description:
+                "Pixel Perfect верстка по макету. Двустраничный сайт с плавной прокруткой, анимациями и адаптивностью. Сделано на чистом JS и CSS.",
+            img: "/projects/3.png",
+            link: "https://asimo-git.github.io/coﬀee-house",
+            tags: ["CSS", "JavaScript"],
+        },
+        {
+            title: "Календарь дальней дороги",
+            description:
+                "Небольшой арт-проект, реализован на Next.js с использованием серверного рендеринга. Уделено внимание адаптивности и UX.",
+            img: "/projects/4.png",
+            link: "https://asimo-git.github.io/rick-and-morty-task",
+            tags: ["React", "TypeScript", "Next.js", "Vercel", "SPA"],
+        },
+        {
+            title: "CryptoTracker",
+            description:
+                "Приложение отслеживает изменения криптовалют в реальном времени. Интеграция WebSocket позволяет отображать live-данные.",
+            img: "/projects/5.png",
+            link: "https://crypto-tracker-asimo.vercel.app/",
+            tags: [
+                "React",
+                "Redux Toolkit",
+                "WebSocket",
+                "Next.js",
+                "TypeScript",
+                "Vercel",
+            ],
+        },
+        {
+            title: "Арендомания",
+            description: "Сайт для посуточного бронирования в России",
+            img: "/projects/6.png",
+            link: "https://daily-rent-of-housing-fontend-react.vercel.app/",
+            tags: ["React", "Redux Toolkit", "Next.js", "TypeScript", "Vercel"],
         },
     ],
 };

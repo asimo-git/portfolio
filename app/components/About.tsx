@@ -1,17 +1,11 @@
 import { aboutContent } from "../content/data";
+import { Subtitle } from "./Subtitle";
 
 export function About() {
     return (
         <section id="about" className="relative z-10 px-6 py-20">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                    <span className="inline-block px-4 py-2 rounded-full glass-card text-green-400 font-mono text-sm mb-4">
-                        {aboutContent.greeting}
-                    </span>
-                    <h2 className="text-4xl font-bold text-white">
-                        {aboutContent.subtitle}
-                    </h2>
-                </div>
+                <Subtitle text={aboutContent.subtitle} />
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left */}

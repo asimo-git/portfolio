@@ -1,5 +1,12 @@
+export const navLinks = [
+    { href: "#about", label: "Обо мне" },
+    { href: "#skills", label: "Навыки" },
+    { href: "#projects", label: "Проекты" },
+    { href: "#contact", label: "Контакты" },
+];
+
 export const heroContent = {
-    greeting: "👋 Привет, я",
+    greeting: "Привет, я",
     name: "Екатерина Ковалева",
     subtitle: "Frontend-разработчик",
     description:

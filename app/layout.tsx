@@ -28,11 +28,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-main text-white`}
-                style={{
-                    background:
-                        "linear-gradient(135deg, #022c22 0%, #064e3b 25%, #065f46 50%, #047857 75%, #059669 100%)",
-                }}
+                className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-main text-white w-full min-h-full relative`}
             >
                 {children}
             </body>

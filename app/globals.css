@@ -16,6 +16,22 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+.page > * {
+    background: linear-gradient(
+        135deg,
+        #022c22 0%,
+        #064e3b 25%,
+        #065f46 50%,
+        #047857 75%,
+        #059669 100%
+    );
+}
+
 .font-main {
     font-family: var(--font-space), sans-serif;
 }

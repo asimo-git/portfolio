@@ -19,14 +19,12 @@ export function Contacts() {
         setButtonText(contactsContent.buttonText);
     };
 
-    const handleSubmit = async (e: React.SubmitEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const res = await fetch("/api/telegram", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(form),
         });
 
@@ -39,18 +37,25 @@ export function Contacts() {
     };
 
     return (
-        <section id="contact" className="relative z-10 px-6 py-20">
+        <section
+            id="contact"
+            className="relative z-10 px-4 sm:px-6 py-12 md:py-20"
+        >
             <div className="max-w-4xl mx-auto">
                 <Subtitle text={contactsContent.subtitle} />
-                <div className="text-center mb-12 text-green-300/70 text-xl">
+
+                <div className="text-center mb-8 md:mb-12 text-green-300/70 text-base sm:text-xl px-2">
                     {contactsContent.text}
                 </div>
 
-                <div className="glass-card rounded-2xl p-8 md:p-12">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
+                <div className="glass-card rounded-2xl p-5 sm:p-8 md:p-12">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="space-y-5 sm:space-y-6"
+                    >
+                        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                             <div>
-                                <label className="block text-green-400 font-medium mb-2">
+                                <label className="block text-green-400 font-medium mb-2 text-sm sm:text-base">
                                     {contactsContent.name.label}
                                 </label>
                                 <input
@@ -61,12 +66,12 @@ export function Contacts() {
                                     placeholder={
                                         contactsContent.name.placeholder
                                     }
-                                    className="w-full px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors"
+                                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors text-sm sm:text-base"
                                 />
                             </div>
 
                             <div>
-                                <label className="block text-green-400 font-medium mb-2">
+                                <label className="block text-green-400 font-medium mb-2 text-sm sm:text-base">
                                     {contactsContent.email.label}
                                 </label>
                                 <input
@@ -76,13 +81,13 @@ export function Contacts() {
                                     placeholder={
                                         contactsContent.email.placeholder
                                     }
-                                    className="w-full px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors"
+                                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors text-sm sm:text-base"
                                 />
                             </div>
                         </div>
 
                         <div>
-                            <label className="block text-green-400 font-medium mb-2">
+                            <label className="block text-green-400 font-medium mb-2 text-sm sm:text-base">
                                 {contactsContent.message.label}
                             </label>
                             <textarea
@@ -93,28 +98,28 @@ export function Contacts() {
                                 placeholder={
                                     contactsContent.message.placeholder
                                 }
-                                className="w-full px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors resize-none"
+                                className="w-full px-3 sm:px-4 py-3 rounded-xl bg-green-950/50 border border-green-500/30 text-white placeholder-green-500/50 focus:border-green-400 focus:outline-none transition-colors resize-none text-sm sm:text-base"
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full neon-border px-8 py-4 rounded-xl bg-green-500 hover:bg-green-400 text-green-900 font-bold text-lg transition-all duration-300 hover:scale-[1.02]"
+                            className="w-full neon-border px-8 py-3 sm:py-4 rounded-xl bg-green-500 hover:bg-green-400 text-green-900 font-bold text-base sm:text-lg transition-all duration-300 hover:scale-[1.02]"
                         >
                             {buttonText}
                         </button>
                     </form>
 
-                    <div className="mt-8 pt-8 border-t border-green-500/20">
-                        <div className="flex flex-wrap justify-center gap-6">
+                    <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-green-500/20">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                             <a
                                 href="mailto:rvolenc@gmail.com"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-10 h-10 rounded-lg glass-card flex items-center justify-center">
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
                                     📧
                                 </span>
-                                <span className="font-mono text-sm">
+                                <span className="font-mono text-xs sm:text-sm">
                                     rvolenc@gmail.com
                                 </span>
                             </a>
@@ -125,10 +130,10 @@ export function Contacts() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-10 h-10 rounded-lg glass-card flex items-center justify-center">
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
                                     💼
                                 </span>
-                                <span className="font-mono text-sm">
+                                <span className="font-mono text-xs sm:text-sm">
                                     LinkedIn
                                 </span>
                             </a>
@@ -139,10 +144,10 @@ export function Contacts() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-10 h-10 rounded-lg glass-card flex items-center justify-center">
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
                                     🐙
                                 </span>
-                                <span className="font-mono text-sm">
+                                <span className="font-mono text-xs sm:text-sm">
                                     GitHub
                                 </span>
                             </a>

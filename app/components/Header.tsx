@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const navLinks = [
-    { href: "#about", label: "Обо мне" },
-    { href: "#skills", label: "Навыки" },
-    { href: "#projects", label: "Проекты" },
-    { href: "#contact", label: "Контакты" },
-];
+import { navLinks } from "../content/data";
 
 export function Header() {
     return (

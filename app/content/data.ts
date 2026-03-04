@@ -1,7 +1,7 @@
 export const navLinks = [
     { href: "#about", label: "Обо мне" },
     { href: "#skills", label: "Навыки" },
-    { href: "#projects", label: "Проекты" },
+    { href: "#projects", label: "Примеры работ" },
     { href: "#contact", label: "Контакты" },
 ];
 
@@ -69,6 +69,12 @@ export const skillContent = {
         { icon: "🧪", name: "Jest" },
         { icon: "🚀", name: "Vite" },
         { icon: "🔄", name: "Redux" },
+        { icon: "🌐", name: "Next.js" },
+        { icon: "🔧", name: "ESLint" },
+        { icon: "📡", name: "REST API" },
+        { icon: "⚡", name: "WebSocket" },
+        { icon: "📈", name: "Vercel" },
+        { icon: "🖥️", name: "SPA" },
     ],
 };
 
@@ -82,7 +88,7 @@ type Project = {
 };
 
 export const projectsContent = {
-    subtitle: "03. Проекты",
+    subtitle: "03. Примеры работ",
     projects: <Project[]>[
         {
             title: "Сайт для мастера маникюра",

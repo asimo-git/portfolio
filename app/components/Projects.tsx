@@ -13,7 +13,7 @@ export function Projects() {
                     {projectsContent.projects.map((project) => (
                         <div
                             key={project.title}
-                            className="project-card glass-card rounded-2xl overflow-hidden group"
+                            className="project-card glass-card rounded-2xl overflow-hidden group flex flex-col"
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <Image
@@ -34,7 +34,7 @@ export function Projects() {
                                 </div>
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-6 flex flex-col flex-1">
                                 <h3 className="text-xl font-bold text-white mb-2">
                                     {project.title}
                                 </h3>
@@ -43,7 +43,7 @@ export function Projects() {
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 mt-auto">
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}

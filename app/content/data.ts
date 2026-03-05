@@ -1,5 +1,5 @@
 import { FiZap, FiTool, FiSmartphone, FiLayers } from "react-icons/fi";
-import { FaReact, FaGitAlt, FaFigma, FaRocket } from "react-icons/fa";
+import { FaReact, FaGitAlt, FaFigma } from "react-icons/fa";
 
 import {
     SiTypescript,

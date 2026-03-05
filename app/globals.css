@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-main: var(--font-space);
+    --font-mono: var(--font-mono);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page > * {
+    background: linear-gradient(
+        135deg,
+        #022c22 0%,
+        #064e3b 25%,
+        #065f46 50%,
+        #047857 75%,
+        #059669 100%
+    );
+}
+
+.font-main {
+    font-family: var(--font-space), sans-serif;
+}
+.font-mono {
+    font-family: var(--font-mono), monospace;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+.animate-float-delay {
+    animation: float 6s ease-in-out infinite 2s;
+}
+.animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+}
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+.delay-200 {
+    animation-delay: 0.2s;
+}
+.delay-300 {
+    animation-delay: 0.3s;
+}
+.delay-400 {
+    animation-delay: 0.4s;
+}
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.neon-border {
+    position: relative;
+}
+
+.neon-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #22c55e, #10b981, #059669, #22c55e);
+    border-radius: inherit;
+    z-index: -1;
+    background-size: 300% 300%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+.skill-bar {
+    background: linear-gradient(90deg, #22c55e 0%, #10b981 50%, #059669 100%);
+    background-size: 200% 100%;
+    animation: gradient-shift 3s ease infinite;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.font-main {
+    font-family: var(--font-main);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}

@@ -34,12 +34,12 @@ export function Projects() {
                                 </div>
                             </div>
 
-                            <div className="p-6 flex flex-col flex-1">
-                                <h3 className="text-xl font-bold text-white mb-2">
+                            <div className="p-6 flex flex-col flex-1 gap-3">
+                                <h3 className="text-xl font-bold text-white">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-green-300/70 text-sm mb-4 shrink-0">
+                                <p className="text-green-300/70 text-sm">
                                     {project.description}
                                 </p>
 

@@ -164,7 +164,8 @@ export const projectsContent = {
         },
         {
             title: "Арендомания",
-            description: "Сайт для посуточного бронирования в России",
+            description:
+                "Сайт для посуточного бронирования в России. Проект в текущей разработке.",
             img: "/projects/6.png",
             link: "https://daily-rent-of-housing-fontend-react.vercel.app/",
             tags: ["React", "Redux Toolkit", "Next.js", "TypeScript", "Vercel"],

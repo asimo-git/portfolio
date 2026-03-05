@@ -21,6 +21,10 @@ body {
     height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .page > * {
     background: linear-gradient(
         135deg,

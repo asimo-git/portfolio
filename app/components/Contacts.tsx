@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { contactsContent } from "../content/data";
 import { Subtitle } from "./Subtitle";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 export function Contacts() {
     const [form, setForm] = useState({
@@ -116,8 +119,8 @@ export function Contacts() {
                                 href="mailto:rvolenc@gmail.com"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
-                                    📧
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                                    <HiOutlineMail />
                                 </span>
                                 <span className="font-mono text-xs sm:text-sm">
                                     rvolenc@gmail.com
@@ -130,8 +133,8 @@ export function Contacts() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
-                                    💼
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                                    <BsLinkedin />
                                 </span>
                                 <span className="font-mono text-xs sm:text-sm">
                                     LinkedIn
@@ -144,8 +147,8 @@ export function Contacts() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
                             >
-                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0">
-                                    🐙
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                                    <FaGithub />
                                 </span>
                                 <span className="font-mono text-xs sm:text-sm">
                                     GitHub

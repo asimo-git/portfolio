@@ -1,4 +1,5 @@
 import { heroContent } from "../content/data";
+import { FaReact, FaMobileAlt, FaApple } from "react-icons/fa";
 
 export function Hero() {
     return (
@@ -120,15 +121,15 @@ export function Hero() {
                                 </div>
 
                                 <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-xl sm:text-2xl animate-float shadow-lg shadow-cyan-500/30">
-                                    ⚛️
+                                    <FaReact className="text-3xl sm:text-2xl text-white" />
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-lg sm:text-xl animate-float-delay shadow-lg shadow-blue-500/30">
-                                    📱
+                                    <FaMobileAlt className="text-lg sm:text-xl text-white" />
                                 </div>
 
-                                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-base sm:text-lg animate-float shadow-lg shadow-amber-500/30">
-                                    ✨
+                                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-400 flex items-center justify-center text-base sm:text-lg animate-float shadow-lg shadow-amber-500/30">
+                                    <FaApple className="text-lg sm:text-xl text-white" />
                                 </div>
                             </div>
                         </div>

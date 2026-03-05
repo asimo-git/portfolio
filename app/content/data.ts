@@ -1,3 +1,20 @@
+import { FiZap, FiTool, FiSmartphone, FiLayers } from "react-icons/fi";
+import { FaReact, FaGitAlt, FaFigma, FaRocket } from "react-icons/fa";
+
+import {
+    SiTypescript,
+    SiTailwindcss,
+    SiWebpack,
+    SiJest,
+    SiVite,
+    SiRedux,
+    SiNextdotjs,
+    SiEslint,
+    SiVercel,
+} from "react-icons/si";
+
+import { FiGlobe, FiActivity, FiMonitor } from "react-icons/fi";
+
 export const navLinks = [
     { href: "#about", label: "Обо мне" },
     { href: "#skills", label: "Навыки" },
@@ -35,22 +52,22 @@ export const aboutContent = {
     ],
     items: [
         {
-            icon: "⚡",
+            icon: FiZap,
             subtitle: "Оптимизация",
             description: "Быстрая загрузка и производительность",
         },
         {
-            icon: "🔧",
+            icon: FiTool,
             subtitle: "Современный стек",
             description: "React, Next.js, TypeScript",
         },
         {
-            icon: "📱",
+            icon: FiSmartphone,
             subtitle: "Адаптивность",
             description: "Корректное отображение на всех устройствах",
         },
         {
-            icon: "🧩",
+            icon: FiLayers,
             subtitle: "Компонентный подход",
             description: "Модульная архитектура и переиспользуемые компоненты",
         },
@@ -60,21 +77,21 @@ export const aboutContent = {
 export const skillContent = {
     subtitle: "02. Мой стек",
     skills: [
-        { icon: "⚛️", name: "React" },
-        { icon: "🔷", name: "TypeScript" },
-        { icon: "🎨", name: "Tailwind" },
-        { icon: "📦", name: "Webpack" },
-        { icon: "🐙", name: "Git" },
-        { icon: "🎭", name: "Figma" },
-        { icon: "🧪", name: "Jest" },
-        { icon: "🚀", name: "Vite" },
-        { icon: "🔄", name: "Redux" },
-        { icon: "🌐", name: "Next.js" },
-        { icon: "🔧", name: "ESLint" },
-        { icon: "📡", name: "REST API" },
-        { icon: "⚡", name: "WebSocket" },
-        { icon: "📈", name: "Vercel" },
-        { icon: "🖥️", name: "SPA" },
+        { icon: FaReact, name: "React" },
+        { icon: SiTypescript, name: "TypeScript" },
+        { icon: SiTailwindcss, name: "Tailwind" },
+        { icon: SiWebpack, name: "Webpack" },
+        { icon: FaGitAlt, name: "Git" },
+        { icon: FaFigma, name: "Figma" },
+        { icon: SiJest, name: "Jest" },
+        { icon: SiVite, name: "Vite" },
+        { icon: SiRedux, name: "Redux" },
+        { icon: SiNextdotjs, name: "Next.js" },
+        { icon: SiEslint, name: "ESLint" },
+        { icon: FiGlobe, name: "REST API" },
+        { icon: FiActivity, name: "WebSocket" },
+        { icon: SiVercel, name: "Vercel" },
+        { icon: FiMonitor, name: "SPA" },
     ],
 };
 

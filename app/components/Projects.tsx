@@ -39,7 +39,7 @@ export function Projects() {
                                     {project.title}
                                 </h3>
 
-                                <p className="text-green-300/70 text-sm mb-4">
+                                <p className="text-green-300/70 text-sm mb-4 shrink-0">
                                     {project.description}
                                 </p>
 

@@ -5,14 +5,18 @@ export function About() {
     return (
         <section
             id="about"
-            className="relative z-10 px-4 sm:px-6 py-12 md:py-20"
+            className="relative px-4 sm:px-6 pt-12 md:pt-20 pb-0 overflow-visible"
+            style={{ paddingBottom: "0" }}
         >
-            <div className="max-w-6xl mx-auto">
+            <div
+                className="max-w-6xl mx-auto"
+                style={{ paddingBottom: "0", marginBottom: "-30px" }}
+            >
                 <Subtitle text={aboutContent.subtitle} />
 
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left */}
-                    <div className="glass-card rounded-2xl p-5 sm:p-8 space-y-6">
+                    <div className="relative z-20 glass-card rounded-2xl p-5 sm:p-8 space-y-6">
                         <p
                             id="about-text"
                             className="text-green-200/90 leading-relaxed text-base sm:text-lg"
@@ -38,7 +42,7 @@ export function About() {
                     </div>
 
                     {/* Right */}
-                    <div className="space-y-3 sm:space-y-4">
+                    <div className="space-y-3 sm:space-y-4  z-20">
                         {aboutContent.items.map((item, idx) => {
                             const Icon = item.icon;
                             return (

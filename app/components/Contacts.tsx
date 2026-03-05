@@ -4,7 +4,7 @@ import { contactsContent } from "../content/data";
 import { Subtitle } from "./Subtitle";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaTelegramPlane } from "react-icons/fa";
 
 export function Contacts() {
     const [form, setForm] = useState({
@@ -113,7 +113,7 @@ export function Contacts() {
                         </button>
                     </form>
 
-                    <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-green-500/20">
+                    {/* <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-green-500/20">
                         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                             <a
                                 href="mailto:rvolenc@gmail.com"
@@ -154,6 +154,43 @@ export function Contacts() {
                                     GitHub
                                 </span>
                             </a>
+
+                            <a
+                                href="https://t.me/AsimoRi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
+                            >
+                                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                                    <FaTelegramPlane />
+                                </span>
+                                <span className="font-mono text-xs sm:text-sm">
+                                    Telegram
+                                </span>
+                            </a>
+                        </div>
+                    </div> */}
+                    <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-green-500/20">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                            {contactsContent.items.map((item) => {
+                                const Icon = item.icon;
+                                return (
+                                    <a
+                                        key={item.href}
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 text-green-300 hover:text-white transition-colors"
+                                    >
+                                        <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg glass-card flex items-center justify-center shrink-0 text-lg sm:text-xl">
+                                            <Icon />
+                                        </span>
+                                        <span className="font-mono text-xs sm:text-sm">
+                                            {item.text}
+                                        </span>
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,11 @@
 import { FiZap, FiTool, FiSmartphone, FiLayers } from "react-icons/fi";
-import { FaReact, FaGitAlt, FaFigma } from "react-icons/fa";
+import {
+    FaReact,
+    FaGitAlt,
+    FaFigma,
+    FaGithub,
+    FaTelegramPlane,
+} from "react-icons/fa";
 
 import {
     SiTypescript,
@@ -14,6 +20,8 @@ import {
 } from "react-icons/si";
 
 import { FiGlobe, FiActivity, FiMonitor } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsLinkedin } from "react-icons/bs";
 
 export const navLinks = [
     { href: "#about", label: "Обо мне" },
@@ -43,7 +51,7 @@ export const aboutContent = {
     name: "Екатерина Ковалева",
     subtitle: "01. Обо мне",
     description:
-        "Я frontend-разработчик с 5+ годами опыта создания современных веб-приложений. Специализируюсь на React экосистеме и создании плавных пользовательских интерфейсов.",
+        "Я - frontend-разработчик с коммерческим опытом создания современных веб-приложений. Специализируюсь на React экосистеме и создании плавных пользовательских интерфейсов. Мой опыт включает как разработку проектов с нуля (greenfield), так и поддержку легаси-кода с последующим рефакторингом. Легко интегрируюсь в распределенные команды, следую Git-флоу, провожу код-ревью и пишу понятную документацию. Владею английским на уровне B2 для чтения технической литературы и переписки. Умею не только реализовать дизайн из Figma «пиксель в пиксель», но и предложить улучшения для повышения удобства и доступности.",
     plaques: [
         { title: "ES6+", content: "Чистый код" },
         { title: "Git", content: "Контроль версий" },
@@ -156,7 +164,8 @@ export const projectsContent = {
         },
         {
             title: "Арендомания",
-            description: "Сайт для посуточного бронирования в России",
+            description:
+                "Сайт для посуточного бронирования в России. Проект в текущей разработке.",
             img: "/projects/6.png",
             link: "https://daily-rent-of-housing-fontend-react.vercel.app/",
             tags: ["React", "Redux Toolkit", "Next.js", "TypeScript", "Vercel"],
@@ -183,4 +192,30 @@ export const contactsContent = {
     buttonText: "Отправить сообщение",
     successMessage: "Сообщение отправлено!",
     errorMessage: "Неизвестная ошибка :(",
+    items: [
+        {
+            label: "Email",
+            href: "mailto:rvolenc@gmail.com",
+            icon: HiOutlineMail,
+            text: "rvolenc@gmail.com",
+        },
+        {
+            label: "LinkedIn",
+            href: "https://www.linkedin.com/in/ekaterina-kovaleva-93a466335",
+            icon: BsLinkedin,
+            text: "LinkedIn",
+        },
+        {
+            label: "GitHub",
+            href: "https://github.com/asimo-git",
+            icon: FaGithub,
+            text: "GitHub",
+        },
+        {
+            label: "Telegram",
+            href: "https://t.me/AsimoRi",
+            icon: FaTelegramPlane,
+            text: "Telegram",
+        },
+    ],
 };

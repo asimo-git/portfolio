@@ -6,6 +6,7 @@ export function Skills() {
         <section
             id="skills"
             className="relative z-10 px-4 sm:px-6 py-12 md:py-20"
+            style={{ paddingTop: "7rem" }}
         >
             <div className="max-w-6xl mx-auto">
                 <Subtitle text={skillContent.subtitle} />

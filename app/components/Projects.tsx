@@ -2,23 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectsContent } from "../content/data";
 import { Subtitle } from "./Subtitle";
+import { useTranslations } from "next-intl";
 
 export function Projects() {
+    const t = useTranslations("projects");
     return (
         <section id="projects" className="relative z-10 px-6 py-20">
             <div className="max-w-6xl mx-auto">
-                <Subtitle text={projectsContent.subtitle} />
+                <Subtitle text={t("subtitle")} />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projectsContent.projects.map((project) => (
                         <div
-                            key={project.title}
+                            key={project.key}
                             className="project-card glass-card rounded-2xl overflow-hidden group flex flex-col"
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <Image
                                     src={project.img}
-                                    alt={project.title}
+                                    alt={t(`items.${project.key}.title`)}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
@@ -36,11 +38,11 @@ export function Projects() {
 
                             <div className="p-6 flex flex-col flex-1 gap-3">
                                 <h3 className="text-xl font-bold text-white">
-                                    {project.title}
+                                    {t(`items.${project.key}.title`)}
                                 </h3>
 
                                 <p className="text-green-300/70 text-sm">
-                                    {project.description}
+                                    {t(`items.${project.key}.description`)}
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mt-auto">

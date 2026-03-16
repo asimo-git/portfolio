@@ -1,0 +1,98 @@
+{
+    "nav": {
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "name": "Ekaterina Kovaleva",
+        "developer": "Ekaterina",
+        "greeting": "Hi, I'm",
+        "subtitle": "Frontend Developer",
+        "description": "I build modern web applications with high performance and smooth animations. Turning ideas and designs into interactive code.",
+        "buttons": {
+            "projects": "View Projects",
+            "contact": "Contact Me"
+        }
+    },
+    "about": {
+        "subtitle": "01. About Me",
+        "description": "I am a Frontend Developer with commercial experience in building modern web applications. I specialize in the React ecosystem and creating smooth user interfaces. My background includes both greenfield development and maintaining/refactoring legacy codebases. I integrate easily into distributed teams, following Git-flow, conducting code reviews, and writing clear documentation. I have a B2 level of English, sufficient for reading technical literature and professional correspondence. I can not only implement Figma designs 'pixel-perfect' but also suggest improvements to enhance usability and accessibility.",
+        "plaques": {
+            "es6": "Clean Code",
+            "git": "Version Control",
+            "projects": "Projects",
+            "details": "Attention to Detail"
+        },
+        "items": {
+            "optimization": {
+                "subtitle": "Optimization",
+                "description": "Fast loading and performance"
+            },
+            "stack": {
+                "subtitle": "Modern Stack",
+                "description": "React, Next.js, TypeScript"
+            },
+            "adaptive": {
+                "subtitle": "Responsiveness",
+                "description": "Correct display on all devices"
+            },
+            "components": {
+                "subtitle": "Component Approach",
+                "description": "Modular architecture and reusable components"
+            }
+        }
+    },
+    "skills": {
+        "subtitle": "02. My Stack"
+    },
+    "projects": {
+        "subtitle": "03. Projects",
+        "items": {
+            "manicure": {
+                "title": "Manicure Specialist Portfolio",
+                "description": "A modern single-page business card website. Optimized for high performance and fast loading speeds."
+            },
+            "rickmorty": {
+                "title": "Rick and Morty API Viewer",
+                "description": "An interface for interacting with a public API, featuring character search and filtering functionality."
+            },
+            "coffee": {
+                "title": "Coffee House",
+                "description": "Pixel-perfect layout from a design mock-up. A two-page site with smooth scrolling, animations, and full responsiveness, built using pure JS and CSS."
+            },
+            "calendar": {
+                "title": "Long Journey Calendar",
+                "description": "A small art project built with Next.js using Server-Side Rendering (SSR). Focused on responsiveness and user experience (UX)."
+            },
+            "crypto": {
+                "title": "CryptoTracker",
+                "description": "A real-time cryptocurrency tracking app. Integrated WebSockets to display live market data."
+            },
+            "arendomania": {
+                "title": "Arendomania",
+                "description": "A vacation rental booking platform for the Russian market. Project is currently in active development."
+            }
+        }
+    },
+    "contacts": {
+        "subtitle": "04. Contact",
+        "text": "Open to interesting projects and offers",
+        "name": { "label": "Name", "placeholder": "How should I address you?" },
+        "email": {
+            "label": "Contact",
+            "placeholder": "Your email or Telegram"
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Tell me about your project..."
+        },
+        "button": "Send Message",
+        "success": "Message sent!",
+        "error": "Unknown error :("
+    },
+    "footer": {
+        "text": "All rights reserved. Made with 💚"
+    }
+}

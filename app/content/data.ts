@@ -24,66 +24,32 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 
 export const navLinks = [
-    { href: "#about", label: "Обо мне" },
-    { href: "#skills", label: "Навыки" },
-    { href: "#projects", label: "Примеры работ" },
-    { href: "#contact", label: "Контакты" },
+    { href: "#about", key: "about" },
+    { href: "#skills", key: "skills" },
+    { href: "#projects", key: "projects" },
+    { href: "#contact", key: "contact" },
 ];
 
 export const heroContent = {
-    greeting: "Привет, я",
-    name: "Екатерина Ковалева",
-    subtitle: "Frontend-разработчик",
-    description:
-        "Создаю современные веб-приложения с высокой производительностью и плавными анимациями. Превращаю идеи и дизайн в интерактивный код.",
-    buttons: {
-        projects: "Смотреть работы",
-        contact: "Связаться",
-    },
-    codeWindow: {
-        developer: "Екатерина",
-        skills: ["React", "TypeScript", "Next.js"],
-    },
+    skills: ["React", "TypeScript", "Next.js"],
 };
 
 export const aboutContent = {
-    greeting: "01. Обо мне",
-    name: "Екатерина Ковалева",
-    subtitle: "01. Обо мне",
-    description:
-        "Я - frontend-разработчик с коммерческим опытом создания современных веб-приложений. Специализируюсь на React экосистеме и создании плавных пользовательских интерфейсов. Мой опыт включает как разработку проектов с нуля (greenfield), так и поддержку легаси-кода с последующим рефакторингом. Легко интегрируюсь в распределенные команды, следую Git-флоу, провожу код-ревью и пишу понятную документацию. Владею английским на уровне B2 для чтения технической литературы и переписки. Умею не только реализовать дизайн из Figma «пиксель в пиксель», но и предложить улучшения для повышения удобства и доступности.",
     plaques: [
-        { title: "ES6+", content: "Чистый код" },
-        { title: "Git", content: "Контроль версий" },
-        { title: "15+", content: "Проектов" },
-        { title: "100%", content: "Внимания к деталям" },
+        { title: "ES6+", key: "es6" },
+        { title: "Git", key: "git" },
+        { title: "15+", key: "projects" },
+        { title: "100%", key: "details" },
     ],
     items: [
-        {
-            icon: FiZap,
-            subtitle: "Оптимизация",
-            description: "Быстрая загрузка и производительность",
-        },
-        {
-            icon: FiTool,
-            subtitle: "Современный стек",
-            description: "React, Next.js, TypeScript",
-        },
-        {
-            icon: FiSmartphone,
-            subtitle: "Адаптивность",
-            description: "Корректное отображение на всех устройствах",
-        },
-        {
-            icon: FiLayers,
-            subtitle: "Компонентный подход",
-            description: "Модульная архитектура и переиспользуемые компоненты",
-        },
+        { icon: FiZap, key: "optimization" },
+        { icon: FiTool, key: "stack" },
+        { icon: FiSmartphone, key: "adaptive" },
+        { icon: FiLayers, key: "components" },
     ],
 };
 
 export const skillContent = {
-    subtitle: "02. Мой стек",
     skills: [
         { icon: FaReact, name: "React" },
         { icon: SiTypescript, name: "TypeScript" },
@@ -104,8 +70,7 @@ export const skillContent = {
 };
 
 type Project = {
-    title: string;
-    description: string;
+    key: string;
     img: string;
     link: string;
     gradient?: string;
@@ -113,44 +78,33 @@ type Project = {
 };
 
 export const projectsContent = {
-    subtitle: "03. Примеры работ",
     projects: <Project[]>[
         {
-            title: "Сайт для мастера маникюра",
-            description:
-                "Одностраничный сайт-визитка с современным дизайном. Сделан максимально легким и быстрым для загрузки",
+            key: "manicure",
             img: "/projects/1.png",
             link: "https://asimo-git.github.io/lightweight-template/",
             tags: ["JavaScript", "CSS", "Vite"],
         },
         {
-            title: "Rick and Morty API Viewer",
-            description:
-                "Пример интерфейса для работы с открытым API. Фильтрация и поиск по персонажам.",
+            key: "rickmorty",
             img: "/projects/2.png",
             link: "https://asimo-git.github.io/rick-and-morty-task",
             tags: ["React", "JavaScript", "WebSocket"],
         },
         {
-            title: "Coﬀee House",
-            description:
-                "Pixel Perfect верстка по макету. Двустраничный сайт с плавной прокруткой, анимациями и адаптивностью. Сделано на чистом JS и CSS.",
+            key: "coffee",
             img: "/projects/3.png",
             link: "https://asimo-git.github.io/coﬀee-house",
             tags: ["CSS", "JavaScript"],
         },
         {
-            title: "Календарь дальней дороги",
-            description:
-                "Небольшой арт-проект, реализован на Next.js с использованием серверного рендеринга. Уделено внимание адаптивности и UX.",
+            key: "calendar",
             img: "/projects/4.png",
             link: "https://asimo-git.github.io/rick-and-morty-task",
             tags: ["React", "TypeScript", "Next.js", "Vercel", "SPA"],
         },
         {
-            title: "CryptoTracker",
-            description:
-                "Приложение отслеживает изменения криптовалют в реальном времени. Интеграция WebSocket позволяет отображать live-данные.",
+            key: "crypto",
             img: "/projects/5.png",
             link: "https://crypto-tracker-asimo.vercel.app/",
             tags: [
@@ -163,9 +117,7 @@ export const projectsContent = {
             ],
         },
         {
-            title: "Арендомания",
-            description:
-                "Сайт для посуточного бронирования в России. Проект в текущей разработке.",
+            key: "arendomania",
             img: "/projects/6.png",
             link: "https://daily-rent-of-housing-fontend-react.vercel.app/",
             tags: ["React", "Redux Toolkit", "Next.js", "TypeScript", "Vercel"],
@@ -174,24 +126,6 @@ export const projectsContent = {
 };
 
 export const contactsContent = {
-    subtitle: "04. Контакты",
-    text: "Открыта для интересных проектов и предложений",
-
-    name: {
-        label: "Имя",
-        placeholder: "Как к вам обращаться?",
-    },
-    email: {
-        label: "Контакт для связи",
-        placeholder: "Ваш е-мейл или телеграм",
-    },
-    message: {
-        label: "Сообщение",
-        placeholder: "Расскажите о вашем проекте...",
-    },
-    buttonText: "Отправить сообщение",
-    successMessage: "Сообщение отправлено!",
-    errorMessage: "Неизвестная ошибка :(",
     items: [
         {
             label: "Email",

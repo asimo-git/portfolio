@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export function Footer() {
+    const t = useTranslations("footer");
     return (
         <footer className="relative z-10 px-6 py-8 border-t border-green-500/20">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
@@ -12,8 +15,7 @@ export function Footer() {
                 </div>
 
                 <p className="text-green-300/50 text-sm">
-                    © {new Date().getFullYear()} Все права защищены. Сделано с
-                    💚
+                    © {new Date().getFullYear()} {t("text")}
                 </p>
             </div>
         </footer>

@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import { aboutContent } from "../content/data";
 import { Subtitle } from "./Subtitle";
 
 export function About() {
+    const t = useTranslations("about");
+
     return (
         <section
             id="about"
@@ -12,7 +15,7 @@ export function About() {
                 className="max-w-6xl mx-auto"
                 style={{ paddingBottom: "0", marginBottom: "-30px" }}
             >
-                <Subtitle text={aboutContent.subtitle} />
+                <Subtitle text={t("subtitle")} />
 
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left */}
@@ -21,7 +24,7 @@ export function About() {
                             id="about-text"
                             className="text-green-200/90 leading-relaxed text-base sm:text-lg"
                         >
-                            {aboutContent.description}
+                            {t("description")}
                         </p>
 
                         <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-4">
@@ -34,7 +37,7 @@ export function About() {
                                         {item.title}
                                     </div>
                                     <div className="text-xs sm:text-sm text-green-300/70">
-                                        {item.content}
+                                        {t(`plaques.${item.key}`)}
                                     </div>
                                 </div>
                             ))}
@@ -43,11 +46,11 @@ export function About() {
 
                     {/* Right */}
                     <div className="space-y-3 sm:space-y-4  z-20">
-                        {aboutContent.items.map((item, idx) => {
+                        {aboutContent.items.map((item) => {
                             const Icon = item.icon;
                             return (
                                 <div
-                                    key={idx}
+                                    key={item.key}
                                     className="glass-card rounded-xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 hover:bg-green-500/10 transition-colors"
                                 >
                                     <div className="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-lg sm:text-xl">
@@ -56,10 +59,10 @@ export function About() {
 
                                     <div className="min-w-0 flex-1">
                                         <h3 className="font-semibold text-white text-sm sm:text-base truncate">
-                                            {item.subtitle}
+                                            {t(`items.${item.key}.subtitle`)}
                                         </h3>
                                         <p className="text-xs sm:text-sm text-green-300/70 leading-snug">
-                                            {item.description}
+                                            {t(`items.${item.key}.description`)}
                                         </p>
                                     </div>
                                 </div>

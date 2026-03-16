@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import { heroContent } from "../content/data";
 import { FaReact, FaMobileAlt, FaApple } from "react-icons/fa";
 
 export function Hero() {
+    const t = useTranslations("hero");
+
     return (
         <section className="relative z-10 px-4 sm:px-6 py-12 md:py-24 overflow-hidden">
             <div className="max-w-6xl mx-auto">
@@ -10,7 +13,7 @@ export function Hero() {
                     <div className="space-y-5 md:space-y-6">
                         <div className="animate-slide-up opacity-0">
                             <span className="inline-block px-4 py-2 rounded-full glass-card text-green-400 font-mono text-xl">
-                                {heroContent.greeting}
+                                {t("greeting")}
                             </span>
                         </div>
 
@@ -19,7 +22,7 @@ export function Hero() {
                             className="text-4xl sm:text-5xl md:text-7xl font-bold animate-slide-up opacity-0 delay-100"
                         >
                             <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent animate-gradient">
-                                {heroContent.name}
+                                {t("name")}
                             </span>
                         </h1>
 
@@ -27,14 +30,14 @@ export function Hero() {
                             id="hero-subtitle"
                             className="text-xl sm:text-2xl md:text-3xl text-green-300 font-medium animate-slide-up opacity-0 delay-200"
                         >
-                            {heroContent.subtitle}
+                            {t("subtitle")}
                         </h2>
 
                         <p
                             id="hero-description"
                             className="text-base sm:text-lg text-green-200/80 max-w-md leading-relaxed animate-slide-up opacity-0 delay-300"
                         >
-                            {heroContent.description}
+                            {t("description")}
                         </p>
 
                         <div className="flex flex-wrap gap-3 sm:gap-4 animate-slide-up opacity-0 delay-400">
@@ -42,13 +45,13 @@ export function Hero() {
                                 href="#projects"
                                 className="neon-border px-6 sm:px-8 py-3 rounded-xl bg-green-500 hover:bg-green-400 text-green-950 font-semibold transition-all duration-300 hover:scale-105"
                             >
-                                {heroContent.buttons.projects}
+                                {t("buttons.projects")}
                             </a>
                             <a
                                 href="#contact"
                                 className="px-6 sm:px-8 py-3 rounded-xl glass-card text-green-400 font-semibold hover:bg-green-500/20 transition-all duration-300"
                             >
-                                {heroContent.buttons.contact}
+                                {t("buttons.contact")}
                             </a>
                         </div>
                     </div>
@@ -84,10 +87,7 @@ export function Hero() {
                                                 name:
                                             </span>{" "}
                                             <span className="text-amber-300">
-                                                {
-                                                    heroContent.codeWindow
-                                                        .developer
-                                                }
+                                                {t("developer")}
                                             </span>
                                             ,
                                         </div>
@@ -97,7 +97,7 @@ export function Hero() {
                                             </span>{" "}
                                             [
                                         </div>
-                                        {heroContent.codeWindow.skills.map(
+                                        {heroContent.skills.map(
                                             (skill, idx) => (
                                                 <div className="pl-8" key={idx}>
                                                     <span className="text-amber-300">

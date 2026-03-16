@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import { skillContent } from "../content/data";
 import { Subtitle } from "./Subtitle";
 
 export function Skills() {
+    const t = useTranslations("skills");
     return (
         <section
             id="skills"
@@ -9,7 +11,7 @@ export function Skills() {
             style={{ paddingTop: "7rem" }}
         >
             <div className="max-w-6xl mx-auto">
-                <Subtitle text={skillContent.subtitle} />
+                <Subtitle text={t("subtitle")} />
 
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
                     {skillContent.skills.map((skill) => {
